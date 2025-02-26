@@ -13,3 +13,6 @@
 .fw-light {
   font-weight: 300 !important;
 }
+.fw-normal {
+  font-weight: normal !important;
+}

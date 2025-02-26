@@ -249,7 +249,7 @@
           .down-arrow {
             position: absolute;
             top: calc(100% - 120px);
-            left: calc(50% - 60px);
+            left: calc(50% - 30px);
             width: 60px;
             height: 60px;
             animation: jumpInfinite 1.5s infinite;
@@ -276,7 +276,7 @@
               margin-top: 0;
             }
           }
-          .image-wrapper.bg-overlay:before {
+          #cta.image-wrapper.bg-overlay:before {
             background-color: rgba(0, 0, 0, 0.7);
           }
           .video-content h1 {
@@ -289,11 +289,34 @@
             font-size: 20px;
             letter-spacing: 1px;
           }
+
+          .project .card-body {
+            padding: 1rem;
+          }
+          .project .card-body h3 {
+            font-weight: 300;
+            font-size: 18px;
+            margin-bottom: 0;
+            /* letter-spacing: 1px; */
+          }
+          .project .card-body .location {
+            font-weight: 300;
+            color: #444;
+          }
+          .project .card-body .location i {
+            font-weight: normal;
+          }
           @media (max-width: 767px) {
             .video-content h1 {
               max-width: 90%;
               margin-left: auto;
               margin-right: auto;
+            }
+            .video-wrapper {
+              height: 100vh;
+            }
+            .project {
+              margin-bottom: 1.5rem;
             }
           }
         </style>
@@ -332,24 +355,7 @@
         style="background-color: #333"
         id="featuredProjects"
       >
-        <style>
-          .project .card-body {
-            padding: 1rem;
-          }
-          .project .card-body h3 {
-            font-weight: 300;
-            font-size: 18px;
-            margin-bottom: 0;
-            /* letter-spacing: 1px; */
-          }
-          .project .card-body .location {
-            font-weight: 300;
-            color: #444;
-          }
-          .project .card-body .location i {
-            font-weight: normal;
-          }
-        </style>
+        <style></style>
         <div class="container pb-14 pt-14">
           <div class="row">
             <div class="col-md-8 text-center offset-md-2">
@@ -367,10 +373,10 @@
             <!-- /column -->
           </div>
           <div class="grid grid-view projects-masonry">
-            <div class="isotope-filter filter mb-10">
+            <div class="isotope-filter filter mb-3">
               <div class="row">
                 <div class="col-xl-10 mx-auto">
-                  <form class="filter-form mb-10">
+                  <form class="filter-form mb-3">
                     <div class="row">
                       <div class="col-md-4 mb-3 offset-md-2">
                         <div class="form-select-wrapper">
@@ -601,7 +607,9 @@
             </div>
             <!--/column -->
             <div class="col-lg-5">
-              <h2 class="fs-22 italianno text-primary mb-3">Why Choose Us?</h2>
+              <h2 class="fs-36 italianno text-primary mb-0 fw-normal">
+                Why Choose Us?
+              </h2>
               <h3 class="display-4 mb-7">
                 Experience Luxury, Location, and Expertise – The Hallmarks of
                 Your Dream Home.
@@ -712,6 +720,7 @@
         </div>
       </section>
       <section
+        id="cta"
         class="wrapper image-wrapper bg-image bg-overlay text-center"
         data-image-src="./assets/img/bg1.jpg"
       >
@@ -1111,11 +1120,16 @@
                 alt=""
               />
               <p class="lead mb-5">
-                Let's make something great together. We are trusted by over
-                5000+ clients. Join them by using our services and grow your
-                business.
+                Luxury villas and residences in Hyderabad’s prime locations.
+                Elegance, exclusivity, and expert guidance await.
               </p>
-              <a href="#" class="btn btn-white rounded-pill">Join Us</a>
+              <a
+                href="#"
+                class="btn btn-white rounded-pill"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-enquiry"
+                >Join Us</a
+              >
             </div>
             <!-- /.widget -->
           </div>
