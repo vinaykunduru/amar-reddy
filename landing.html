@@ -19,7 +19,7 @@
 
   <body>
     <div class="content-wrapper">
-      <header class="wrapper bg-soft-primary">
+      <header class="wrapper bg-soft-primary d-none">
         <nav
           class="navbar navbar-expand-lg navbar navbar-expand-lg navbar-dark navbar-bg-dark position-absolute navbar-dark"
         >
@@ -202,31 +202,6 @@
           <!-- /.container -->
         </nav>
         <!-- /.navbar -->
-        <div
-          class="offcanvas offcanvas-top bg-light"
-          id="offcanvas-search"
-          data-bs-scroll="true"
-        >
-          <div class="container d-flex flex-row py-6">
-            <form class="search-form w-100">
-              <input
-                id="search-form"
-                type="text"
-                class="form-control"
-                placeholder="Type keyword and hit enter"
-              />
-            </form>
-            <!-- /.search-form -->
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <!-- /.container -->
-        </div>
-        <!-- /.offcanvas -->
       </header>
       <!-- /header -->
 
@@ -243,8 +218,12 @@
             background: rgba(0, 0, 0, 0.8);
             z-index: 1;
           }
+          .video-wrapper {
+            height: 100vh;
+          }
           .video-wrapper .video-content {
             height: 100vh;
+            overflow: hidden;
           }
           .down-arrow {
             position: absolute;
@@ -280,6 +259,11 @@
             background-color: rgba(0, 0, 0, 0.7);
           }
           .video-content h1 {
+            max-width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .video-content p {
             max-width: 50%;
             margin-left: auto;
             margin-right: auto;
@@ -330,15 +314,40 @@
         ></video>
         <div class="video-content">
           <div class="container text-center">
+            <img
+              class="logo-light"
+              src="./assets/img/logo-pad.png"
+              alt=""
+              style="
+                max-width: 120px;
+                margin: 0 auto 20px auto;
+                border-radius: 100%;
+                padding: 10px;
+                background-color: #000;
+              "
+            />
             <h3 class="text-gold italianno fs-36 mb-0">
-              Luxury Living, Redefined.
+              Luxury Living, Coming Soon.
             </h3>
             <h1 class="display-1 text-white text-center">
-              Hyderabad’s Finest Homes Await
+              A New Era of Prestige & Elegance
             </h1>
             <p class="mb-0 text-white text-center fs-18">
-              Exclusive Villas & Residences in Elite Locations.
+              Curating Hyderabad’s finest luxury homes with unparalleled
+              elegance and expert guidance. Your dream home, just a step away.
             </p>
+
+            <p class="mt-8 mb-1 text-white text-center fs-16">
+              Follow Us for Exclusive Updates
+            </p>
+            <nav
+              class="nav social social-white justify-content-center text-center"
+            >
+              <a href="#"><i class="uil uil-twitter"></i></a>
+              <a href="#"><i class="uil uil-facebook-f"></i></a>
+
+              <a href="#"><i class="uil uil-instagram"></i></a>
+            </nav>
           </div>
           <!-- /.container -->
           <div class="down-arrow">
@@ -350,850 +359,17 @@
         <!-- /.video-content -->
       </section>
 
-      <section
-        class="wrapper"
-        style="background-color: #333"
-        id="featuredProjects"
-      >
-        <style></style>
-        <div class="container pb-14 pt-14">
-          <div class="row">
-            <div class="col-md-8 text-center offset-md-2">
-              <h2 class="fs-16 italianno fs-36 text-primary mb-0">
-                Our Featured Projects
-              </h2>
-              <h3
-                class="mb-9 text-white"
-                style="font-weight: 400; font-size: 2rem"
-              >
-                Discover exclusive properties that offer the perfect blend of
-                comfort and value.
-              </h3>
-            </div>
-            <!-- /column -->
-          </div>
-          <div class="grid grid-view projects-masonry">
-            <div class="isotope-filter filter mb-3">
-              <div class="row">
-                <div class="col-xl-10 mx-auto">
-                  <form class="filter-form mb-3">
-                    <div class="row">
-                      <div class="col-md-4 mb-3 offset-md-2">
-                        <div class="form-select-wrapper">
-                          <select
-                            class="form-select filters-select"
-                            aria-label=""
-                          >
-                            <option selected>Property</option>
-                            <option value=".villa">Villa</option>
-                            <option value=".flat">Flats</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-3">
-                        <div class="form-select-wrapper">
-                          <select class="form-select" aria-label="">
-                            <option selected>Location</option>
-                            <option value="type4">Financial District</option>
-                            <option value="type1">Kollur</option>
-                            <option value="type3">Kokapet</option>
-                            <option value="type4">Khajaguda</option>
-                            <option value="type4">Lanco Circle</option>
-                            <option value="type4">Narsingi</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="row gx-md-8 gy-md-10 isotope">
-              <div class="project item col-md-6 col-xl-3 villa lift">
-                <div class="card">
-                  <img
-                    class="card-img-top"
-                    src="/assets/img/sage-thumb.jpg"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h3 class="mb-0">SAGE by Raghava</h3>
-                    <div class="d-flex justify-content-between">
-                      <span class="location"
-                        ><i class="uil uil-map-marker pr-1"></i> Kollur</span
-                      >
-                    </div>
-                  </div>
-                  <!--/.card-body -->
-                </div>
-                <!--/.card -->
-              </div>
-              <!-- /.project -->
-
-              <div class="project item col-md-6 col-xl-3 villa lift">
-                <div class="card">
-                  <img
-                    class="card-img-top"
-                    src="/assets/img/aikaa-thumb.jpg"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h3>Sri Aditya Aikaa</h3>
-                    <div class="d-flex justify-content-between">
-                      <span class="location"
-                        ><i class="uil uil-map-marker pr-1"></i> Kokapet</span
-                      >
-                    </div>
-                  </div>
-                  <!--/.card-body -->
-                </div>
-                <!--/.card -->
-              </div>
-              <!-- /.project -->
-
-              <div class="project item col-md-6 col-xl-3 villa lift">
-                <div class="card">
-                  <img
-                    class="card-img-top"
-                    src="/assets/img/Vaishnaoi-Southwoods-thumb.jpg"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h3>Vaishnaoi Southwoods</h3>
-                    <div class="d-flex justify-content-between">
-                      <span class="location"
-                        ><i class="uil uil-map-marker pr-1"></i>
-                        Shamshabad</span
-                      >
-                    </div>
-                  </div>
-                  <!--/.card-body -->
-                </div>
-                <!--/.card -->
-              </div>
-              <!-- /.project -->
-
-              <div class="project item col-md-6 col-xl-3 flat lift">
-                <div class="card">
-                  <img
-                    class="card-img-top"
-                    src="/assets/img/Sumadhura-Palais-Royale.jpg"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h3>Sumadhura Palais Royale</h3>
-                    <div class="d-flex justify-content-between">
-                      <span class="location"
-                        ><i class="uil uil-map-marker pr-1"></i> Khajaguda</span
-                      >
-                    </div>
-                  </div>
-                  <!--/.card-body -->
-                </div>
-                <!--/.card -->
-              </div>
-              <!-- /.project -->
-
-              <div class="project item col-md-6 col-xl-3 flat lift">
-                <div class="card">
-                  <img
-                    class="card-img-top"
-                    src="/assets/img/ACASA-thumb.jpg"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h3>ACASA Hirise Towers</h3>
-                    <div class="d-flex justify-content-between">
-                      <span class="location"
-                        ><i class="uil uil-map-marker pr-1"></i> Kokapet</span
-                      >
-                    </div>
-                  </div>
-                  <!--/.card-body -->
-                </div>
-                <!--/.card -->
-              </div>
-              <!-- /.project -->
-
-              <div class="project item col-md-6 col-xl-3 flat lift">
-                <div class="card">
-                  <img
-                    class="card-img-top"
-                    src="/assets/img/asbl-spectra-thumb.jpg"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h3>ASBL SPECTRA</h3>
-                    <div class="d-flex justify-content-between">
-                      <span class="location"
-                        ><i class="uil uil-map-marker pr-1"></i> Financial
-                        District</span
-                      >
-                    </div>
-                  </div>
-                  <!--/.card-body -->
-                </div>
-                <!--/.card -->
-              </div>
-              <!-- /.project -->
-
-              <div class="project item col-md-6 col-xl-3 flat lift">
-                <div class="card">
-                  <img
-                    class="card-img-top"
-                    src="/assets/img/arka-thumb.jpg"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h3>ARKA</h3>
-                    <div class="d-flex justify-content-between">
-                      <span class="location"
-                        ><i class="uil uil-map-marker pr-1"></i> Lanco
-                        Circle</span
-                      >
-                    </div>
-                  </div>
-                  <!--/.card-body -->
-                </div>
-                <!--/.card -->
-              </div>
-              <!-- /.project -->
-
-              <div class="project item col-md-6 col-xl-3 flat lift">
-                <div class="card">
-                  <img
-                    class="card-img-top"
-                    src="/assets/img/LANSUM-ELDORADO-thumb.jpg"
-                    alt=""
-                  />
-                  <div class="card-body">
-                    <h3>Lansum Eldorado</h3>
-                    <div class="d-flex justify-content-between">
-                      <span class="location"
-                        ><i class="uil uil-map-marker pr-1"></i> Narsingi</span
-                      >
-                    </div>
-                  </div>
-                  <!--/.card-body -->
-                </div>
-                <!--/.card -->
-              </div>
-              <!-- /.project -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.grid -->
-        </div>
-        <!-- /.container -->
-      </section>
-      <!-- /section -->
-
-      <section class="wrapper">
-        <div class="container pt-19 pb-14 pt-md-20 pb-md-16">
-          <div class="row gy-10 gy-sm-13 gx-lg-3 align-items-center">
-            <div
-              class="col-md-8 col-lg-6 offset-lg-1 order-lg-2 position-relative"
-            >
-              <div
-                class="shape rounded-circle bg-line primary rellax w-18 h-18"
-                data-rellax-speed="1"
-                style="top: -2rem; right: -1.9rem"
-              ></div>
-              <div
-                class="shape rounded bg-soft-primary rellax d-md-block"
-                data-rellax-speed="0"
-                style="bottom: -1.8rem; left: -1.5rem; width: 85%; height: 90%"
-              ></div>
-              <figure class="rounded">
-                <img src="/assets/img/why-pcr.jpg" alt="" />
-              </figure>
-            </div>
-            <!--/column -->
-            <div class="col-lg-5">
-              <h2 class="fs-36 italianno text-primary mb-0 fw-normal">
-                Why Choose Us?
-              </h2>
-              <h3 class="display-4 mb-7">
-                Experience Luxury, Location, and Expertise – The Hallmarks of
-                Your Dream Home.
-              </h3>
-              <div class="accordion accordion-wrapper" id="accordionExample">
-                <div class="card plain accordion-item">
-                  <div class="card-header" id="headingOne">
-                    <button
-                      class="accordion-button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                    >
-                      Premium Selection
-                    </button>
-                  </div>
-                  <!--/.card-header -->
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div class="card-body">
-                      <p>
-                        We curate only the finest luxury homes, ensuring each
-                        property meets the highest standards of elegance,
-                        comfort, and exclusivity. Whether it's ultra-modern
-                        villas or high-rise residences, we bring you the best.
-                      </p>
-                    </div>
-                    <!--/.card-body -->
-                  </div>
-                  <!--/.accordion-collapse -->
-                </div>
-                <!--/.accordion-item -->
-                <div class="card plain accordion-item">
-                  <div class="card-header" id="headingTwo">
-                    <button
-                      class="collapsed"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      Prime Locations
-                    </button>
-                  </div>
-                  <!--/.card-header -->
-                  <div
-                    id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div class="card-body">
-                      <p>
-                        Our portfolio features properties in Hyderabad’s most
-                        prestigious neighborhoods, including Gandipet, Kokapet,
-                        and Financial District. Live in a location that offers
-                        luxury, convenience, and a thriving community.
-                      </p>
-                    </div>
-                    <!--/.card-body -->
-                  </div>
-                  <!--/.accordion-collapse -->
-                </div>
-                <!--/.accordion-item -->
-                <div class="card plain accordion-item">
-                  <div class="card-header" id="headingThree">
-                    <button
-                      class="collapsed"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >
-                      Expert Guidance
-                    </button>
-                  </div>
-                  <!--/.card-header -->
-                  <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div class="card-body">
-                      <p>
-                        With years of experience in luxury real estate, we
-                        provide personalized assistance at every step. From
-                        property selection to finalizing the deal, our team
-                        ensures a smooth and hassle-free buying experience.
-                      </p>
-                    </div>
-                    <!--/.card-body -->
-                  </div>
-                  <!--/.accordion-collapse -->
-                </div>
-                <!--/.accordion-item -->
-              </div>
-              <!--/.accordion -->
-            </div>
-            <!--/column -->
-          </div>
-          <!--/.row -->
+      <section class="py-14">
+        <div class="container">
+          <div class="sk-ww-instagram-reels" data-embed-id="25529516"></div>
+          <script
+            src="https://widgets.sociablekit.com/instagram-reels/widget.js"
+            defer
+          ></script>
         </div>
       </section>
-      <section
-        id="cta"
-        class="wrapper image-wrapper bg-image bg-overlay text-center"
-        data-image-src="./assets/img/bg1.jpg"
-      >
-        <div class="container py-18">
-          <div class="row">
-            <div class="col-md-8 offset-md-2">
-              <h2 class="fs-36 italianno text-primary mb-0">
-                Your Dream Home is Just a Call Away
-              </h2>
-              <h3 class="display-4 mb-6 text-white text-center">
-                Exclusive luxury homes. Prime locations. Unmatched service.
-                Let’s make your vision a reality.
-              </h3>
-              <a
-                href="#"
-                class="btn btn-white rounded mb-0 text-nowrap"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-enquiry"
-                >Request a Call Back</a
-              >
-            </div>
-            <!-- /column -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.container -->
-      </section>
-      <!-- /section -->
-      <section class="wrapper bg-light d-none">
-        <div class="container py-14 py-md-16">
-          <div class="row">
-            <div class="col-lg-9 col-xl-8 col-xxl-7">
-              <h2 class="fs-16 text-uppercase text-primary mb-3">
-                Insights & Updates
-              </h2>
-              <h3 class="display-4 mb-9">
-                Stay informed with the latest trends, tips, and updates in real
-                estate.
-              </h3>
-            </div>
-            <!-- /column -->
-          </div>
-          <!-- /.row -->
-          <div
-            class="swiper-container blog grid-view mb-10"
-            data-margin="30"
-            data-dots="true"
-            data-items-xl="3"
-            data-items-md="2"
-            data-items-xs="1"
-          >
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <article>
-                    <figure class="overlay overlay-1 hover-scale rounded mb-6">
-                      <a href="/b1.html">
-                        <img src="./assets/img/bi1.jpg" alt=""
-                      /></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="post-header">
-                      <h2 class="post-title h3 mb-3">
-                        <a class="link-dark" href="./b1.html"
-                          >5 Tips for First-Time Homebuyers: A Guide to Smart
-                          Investments</a
-                        >
-                      </h2>
-                    </div>
-                    <!-- /.post-header -->
-                    <div class="post-footer">
-                      <ul class="post-meta">
-                        <li class="post-date">
-                          <i class="uil uil-calendar-alt"></i
-                          ><span>12 Jan 2025</span>
-                        </li>
-                        <li class="post-comments">
-                          <a href="/b1.html"
-                            ><i class="uil uil-file-alt fs-15"></i>Buying
-                            Guide</a
-                          >
-                        </li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.post-footer -->
-                  </article>
-                  <!-- /article -->
-                </div>
-                <!--/.swiper-slide -->
-                <div class="swiper-slide">
-                  <article>
-                    <figure class="overlay overlay-1 hover-scale rounded mb-6">
-                      <a href="/b1.html">
-                        <img src="./assets/img/bi2.jpg" alt=""
-                      /></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="post-header">
-                      <h2 class="post-title h3 mb-3">
-                        <a class="link-dark" href="#"
-                          >The Future of Real Estate in Hyderabad: Trends to
-                          Watch</a
-                        >
-                      </h2>
-                    </div>
-                    <!-- /.post-header -->
-                    <div class="post-footer">
-                      <ul class="post-meta">
-                        <li class="post-date">
-                          <i class="uil uil-calendar-alt"></i
-                          ><span>12 Jan 2025</span>
-                        </li>
-                        <li class="post-comments">
-                          <a href="/b1.html"
-                            ><i class="uil uil-file-alt fs-15"></i>Market
-                            Trends</a
-                          >
-                        </li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.post-footer -->
-                  </article>
-                  <!-- /article -->
-                </div>
-                <!--/.swiper-slide -->
-                <div class="swiper-slide">
-                  <article>
-                    <figure class="overlay overlay-1 hover-scale rounded mb-6">
-                      <a href="/b1.html">
-                        <img src="./assets/img/bi3.jpg" alt=""
-                      /></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="post-header">
-                      <h2 class="post-title h3 mb-3">
-                        <a class="link-dark" href="/b1.html"
-                          >Maximizing Property Value: Interior Design Ideas That
-                          Work</a
-                        >
-                      </h2>
-                    </div>
-                    <!-- /.post-header -->
-                    <div class="post-footer">
-                      <ul class="post-meta">
-                        <li class="post-date">
-                          <i class="uil uil-calendar-alt"></i
-                          ><span>10 Jan 2025</span>
-                        </li>
-                        <li class="post-comments">
-                          <a href="/b1.html"
-                            ><i class="uil uil-file-alt fs-15"></i>Interior
-                            Design</a
-                          >
-                        </li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.post-footer -->
-                  </article>
-                  <!-- /article -->
-                </div>
-                <!--/.swiper-slide -->
-                <div class="swiper-slide">
-                  <article>
-                    <figure class="overlay overlay-1 hover-scale rounded mb-6">
-                      <a href="/b1.html">
-                        <img src="./assets/img/bi4.jpg" alt=""
-                      /></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="post-header">
-                      <h2 class="post-title h3 mb-3">
-                        <a class="link-dark" href="/b1.html"
-                          >Top 5 Real Estate Investment Strategies for Long-Term
-                          Gains</a
-                        >
-                      </h2>
-                    </div>
-                    <div class="post-footer">
-                      <ul class="post-meta">
-                        <li class="post-date">
-                          <i class="uil uil-calendar-alt"></i
-                          ><span>10 Jan 2025</span>
-                        </li>
-                        <li class="post-comments">
-                          <a href="#"
-                            ><i class="uil uil-file-alt fs-15"></i>Investment
-                            Advice</a
-                          >
-                        </li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.post-footer -->
-                  </article>
-                  <!-- /article -->
-                </div>
-                <!--/.swiper-slide -->
-              </div>
-              <!-- /.swiper-wrapper -->
-            </div>
-            <!-- /.swiper -->
-          </div>
-          <!-- /.swiper-container -->
-        </div>
-        <!-- /.container -->
-      </section>
-      <!-- /section -->
-      <section class="wrapper bg-light">
-        <div class="container py-14 py-md-16">
-          <div class="row text-white text-center">
-            <div class="col-xl-10 mx-auto mb-14 mb-lg-n6">
-              <div
-                class="card image-wrapper bg-full bg-image bg-overlay bg-overlay-400"
-                data-image-src="./assets/img/bg-dark.png"
-              >
-                <div class="card-body p-9 p-xl-12">
-                  <div class="row gx-0">
-                    <div class="col-xxl-9 mx-auto">
-                      <div
-                        class="swiper-container dots-light dots-closer mb-6"
-                        data-margin="30"
-                        data-dots="true"
-                      >
-                        <div class="swiper">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                              <span class="ratings five mb-3"></span>
-                              <blockquote class="border-0 fs-lg mb-2">
-                                <p>
-                                  “Vivamus sagittis lacus augue laoreet rutrum
-                                  faucibus auctor vestibulum ligula porta felis,
-                                  euismod semper cras justo odio consectetur.”
-                                </p>
-                                <div
-                                  class="blockquote-details justify-content-center text-center"
-                                >
-                                  <div class="info ps-0">
-                                    <h5 class="mb-1 text-white">
-                                      Coriss Ambady
-                                    </h5>
-                                    <p class="mb-0">Financial Analyst</p>
-                                  </div>
-                                </div>
-                              </blockquote>
-                            </div>
-                            <!--/.swiper-slide -->
-                            <div class="swiper-slide">
-                              <span class="ratings five mb-3"></span>
-                              <blockquote class="border-0 fs-lg mb-2">
-                                <p>
-                                  “Vivamus sagittis lacus augue laoreet rutrum
-                                  faucibus auctor vestibulum ligula porta felis,
-                                  euismod semper cras justo odio consectetur.”
-                                </p>
-                                <div
-                                  class="blockquote-details justify-content-center text-center"
-                                >
-                                  <div class="info ps-0">
-                                    <h5 class="mb-1 text-white">Cory Zamora</h5>
-                                    <p class="mb-0">Marketing Specialist</p>
-                                  </div>
-                                </div>
-                              </blockquote>
-                            </div>
-                            <!--/.swiper-slide -->
-                            <div class="swiper-slide">
-                              <span class="ratings five mb-3"></span>
-                              <blockquote class="border-0 fs-lg mb-2">
-                                <p>
-                                  “Vivamus sagittis lacus augue laoreet rutrum
-                                  faucibus auctor vestibulum ligula porta felis,
-                                  euismod semper cras justo odio consectetur.”
-                                </p>
-                                <div
-                                  class="blockquote-details justify-content-center text-center"
-                                >
-                                  <div class="info ps-0">
-                                    <h5 class="mb-1 text-white">
-                                      Nikolas Brooten
-                                    </h5>
-                                    <p class="mb-0">Sales Manager</p>
-                                  </div>
-                                </div>
-                              </blockquote>
-                            </div>
-                            <!--/.swiper-slide -->
-                          </div>
-                          <!--/.swiper-wrapper -->
-                        </div>
-                        <!-- /.swiper -->
-                      </div>
-                      <!-- /.swiper-container -->
-                    </div>
-                    <!-- /column -->
-                  </div>
-                  <!-- /.row -->
-                </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.card -->
-            </div>
-            <!-- /column -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.container -->
-      </section>
-      <!-- /section -->
-
-      <section class="wrapper bg-light">
-        <div class="container pb-14 pb-md-16">
-          <p class="text-center mb-8">
-            Trusted by over 2K+ clients across the world
-          </p>
-          <div
-            class="swiper-container clients mb-0"
-            data-margin="30"
-            data-dots="false"
-            data-loop="true"
-            data-autoplay="true"
-            data-autoplaytime="1"
-            data-drag="false"
-            data-speed="5000"
-            data-items-xxl="7"
-            data-items-xl="6"
-            data-items-lg="5"
-            data-items-md="4"
-            data-items-xs="2"
-          >
-            <div class="swiper">
-              <div class="swiper-wrapper ticker">
-                <div class="swiper-slide px-5">
-                  <img src="./assets/img/brands/c1.png" alt="" />
-                </div>
-                <div class="swiper-slide px-5">
-                  <img src="./assets/img/brands/c2.png" alt="" />
-                </div>
-                <div class="swiper-slide px-5">
-                  <img src="./assets/img/brands/c3.png" alt="" />
-                </div>
-                <div class="swiper-slide px-5">
-                  <img src="./assets/img/brands/c4.png" alt="" />
-                </div>
-                <div class="swiper-slide px-5">
-                  <img src="./assets/img/brands/c5.png" alt="" />
-                </div>
-                <div class="swiper-slide px-5">
-                  <img src="./assets/img/brands/c6.png" alt="" />
-                </div>
-                <div class="swiper-slide px-5">
-                  <img src="./assets/img/brands/c7.png" alt="" />
-                </div>
-                <div class="swiper-slide px-5">
-                  <img src="./assets/img/brands/c8.png" alt="" />
-                </div>
-                <div class="swiper-slide px-5">
-                  <img src="./assets/img/brands/c9.png" alt="" />
-                </div>
-                <div class="swiper-slide px-5">
-                  <img src="./assets/img/brands/c10.png" alt="" />
-                </div>
-                <div class="swiper-slide px-5">
-                  <img src="./assets/img/brands/c11.png" alt="" />
-                </div>
-              </div>
-              <!--/.swiper-wrapper -->
-            </div>
-            <!-- /.swiper -->
-          </div>
-          <!-- /.swiper-container -->
-        </div>
-        <!-- /.container -->
-      </section>
-      <!-- /section -->
     </div>
     <!-- /.content-wrapper -->
-    <footer class="bg-dark text-inverse">
-      <div class="container pt-13 pt-md-15 pb-7">
-        <div class="row gy-6 gy-lg-0">
-          <div class="col-lg-4">
-            <div class="widget">
-              <img
-                class="mb-4 fooLogo"
-                src="./assets/img/logo.png"
-                style="max-width: 80px"
-                alt=""
-              />
-              <p class="lead mb-5">
-                Luxury villas and residences in Hyderabad’s prime locations.
-                Elegance, exclusivity, and expert guidance await.
-              </p>
-              <a
-                href="#"
-                class="btn btn-white rounded-pill"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-enquiry"
-                >Join Us</a
-              >
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /column -->
-          <div class="col-md-4 col-lg-2 offset-lg-2">
-            <div class="widget">
-              <h4 class="widget-title text-white mb-3">Need Help?</h4>
-              <ul class="list-unstyled text-reset mb-0">
-                <li><a href="#">Faq's</a></li>
-                <li><a href="#">Get Started</a></li>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /column -->
-          <div class="col-md-4 col-lg-2">
-            <div class="widget">
-              <h4 class="widget-title text-white mb-3">Learn More</h4>
-              <ul class="list-unstyled mb-0">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Projects</a></li>
-                <li><a href="#">News & Events</a></li>
-
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /column -->
-          <div class="col-md-4 col-lg-2">
-            <div class="widget">
-              <h4 class="widget-title text-white mb-3">Get in Touch</h4>
-              <address>
-                Moonshine St. 14/05 Light City, London, United Kingdom
-              </address>
-              <a href="mailto:first.last@email.com">info@email.com</a><br />
-              +91 82082 69069
-            </div>
-            <!-- /.widget -->
-          </div>
-          <!-- /column -->
-        </div>
-        <!--/.row -->
-        <hr class="mt-13 mt-md-15 mb-7" />
-        <div class="d-md-flex align-items-center justify-content-between">
-          <p class="mb-2 mb-lg-0">©2025 Amar Reddy. All rights reserved.</p>
-          <nav class="nav social social-white text-md-end">
-            <a href="#"><i class="uil uil-twitter"></i></a>
-            <a href="#"><i class="uil uil-facebook-f"></i></a>
-
-            <a href="#"><i class="uil uil-instagram"></i></a>
-            <a href="#"><i class="uil uil-youtube"></i></a>
-          </nav>
-          <!-- /.social -->
-        </div>
-        <!-- /div -->
-      </div>
-      <!-- /.container -->
-    </footer>
 
     <style>
       #wpp-fix {
